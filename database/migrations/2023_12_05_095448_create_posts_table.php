@@ -12,12 +12,12 @@ return new class extends Migration {
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            // $table->foreignId('category_id')->constrained();
             $table->string('title');
             $table->text('content');
             $table->string('image', 255)->nullable();
             $table->integer(('like'));
             $table->boolean('published')->default(false);
+            $table->foreignIdFor(\App\Models\User::class, 'user_id')->constrained();
             $table->timestamps();
         });
     }
