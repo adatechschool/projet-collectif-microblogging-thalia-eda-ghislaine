@@ -42,4 +42,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+
+    //un utilisateur peut avoir plusieurs posts donc je dois ajouter une relation 
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
 }
