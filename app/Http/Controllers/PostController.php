@@ -9,15 +9,17 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function index() {
-        
+    public function index()
+    {
+
         return view('accueil', [
-            'posts'=> Post::all()
+            'posts' => Post::all()
         ]);
     }
 
-    public function show(Post $post) {
-        
+    public function show(Post $post)
+    {
+
         return view('post', [
             'post' => $post
 
