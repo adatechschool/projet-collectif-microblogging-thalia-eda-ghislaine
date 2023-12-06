@@ -16,9 +16,7 @@ use App\Http\Controllers\UsersController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\PostController::class,'index'])->name('index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
