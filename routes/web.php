@@ -15,10 +15,14 @@ use App\Http\Controllers\UsersController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/', [UsersController::class, 'index']);
+Route::get('{id}', [UsersController::class, 'show']);
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
