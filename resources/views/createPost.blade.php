@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="max-w-md mx-auto bg-white p-8 border border-gray-300 mt-10 rounded-md">
-        <h2 class="text-2xl font-semibold mb-6 text-center">Créer un nouveau post</h2>
+        <h2 class="text-2xl font-semibold mb-6 text-center">Créer une nouvelle publication</h2>
 
         <form method="post" action="{{ route('storePost') }}" enctype="multipart/form-data">
             @csrf
@@ -17,7 +17,7 @@
         
             <div class="mt-6">
                 <button type="submit" class="bg-black-500 text-black p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:border-blue-700 focus:ring focus:ring-blue-200">
-                    Créer le post
+                    Publier
                 </button>
             </div>
         </form>

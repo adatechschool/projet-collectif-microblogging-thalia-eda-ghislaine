@@ -19,6 +19,7 @@
                         {{-- route à changer --}}
                         {{ __('Mes abonnements') }}
                     </x-nav-link>
+                        
                 </div>
             </div>
 
@@ -43,6 +44,10 @@
                         </x-dropdown-link>
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Mon compte') }}
+                        </x-dropdown-link>
+
+                        <x-dropdown-link :href="route('createPost')">
+                            {{ __('Ajouter une publication') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->
@@ -90,6 +95,7 @@
                 <x-responsive-nav-link :href="route('profile.edit')">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
+                
 
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
