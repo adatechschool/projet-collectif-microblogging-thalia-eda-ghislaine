@@ -16,13 +16,13 @@ use App\Http\Controllers\PostController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', function () {
+Route::get('/accueil', function () {
     return view('welcome');
 });
 Route::get('/users', [UsersController::class, 'index'])->name('users.index');
 Route::get('/user/{user}', [UsersController::class, 'show'])->name('users.show');
 
-Route::get('/posts', [PostController::class, 'index'])->name('index');
+Route::get('/', [PostController::class, 'index'])->name('index');
 Route::get('/post/{post}', [PostController::class, 'show'])->name('post.show');
 
 Route::get('/dashboard', function () {

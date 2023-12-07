@@ -4,6 +4,10 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
+<h1>Mon profil</h1>
+<h2>Mes posts</h2>
+<p>Je crée un nouveau post</p>
+<h2>Mes abonnements</h2>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
