@@ -1,5 +1,3 @@
-{{-- @extends('layouts.main') --}}
-
 {{-- @include('components.nav-link') --}}
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +13,7 @@
 
 <ul>
     @foreach($posts as $post)
-        <li><a href="{{$post->id}}">{{$post['title']}}</a></li>
+        <li><a href="{{ route('post.show', $post->id) }}">{{$post['title']}}</a></li>
     @endforeach
 </ul>
 

@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-
-
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -16,10 +14,10 @@ class UsersController extends Controller
         ]);
     }
 
-    public function show($id)
+    public function show(User $user)
     {
-        return view('users',[
-            'user' => User::find($id)
+        return view('users', [
+            'user' => $user
         ] );
     }
 

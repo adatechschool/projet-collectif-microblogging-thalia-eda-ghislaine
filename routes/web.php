@@ -19,11 +19,11 @@ use App\Http\Controllers\PostController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/users', [UsersController::class, 'index']);
-Route::get('users/{id}', [UsersController::class, 'show']);
+Route::get('/users', [UsersController::class, 'index'])->name('users.index');
+Route::get('/user/{user}', [UsersController::class, 'show'])->name('users.show');
 
-Route::get('/posts', [\App\Http\Controllers\PostController::class, 'index'])->name('index');
-Route::get('{post}', [\App\Http\Controllers\PostController::class, 'show'])->name('show');
+Route::get('/posts', [PostController::class, 'index'])->name('index');
+Route::get('/post/{post}', [PostController::class, 'show'])->name('post.show');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
