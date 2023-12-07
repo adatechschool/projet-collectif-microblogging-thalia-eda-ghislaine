@@ -5,12 +5,12 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('index') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800"/>
-                    </a>
+                    <x-application-logo class="block h-9 w-auto fill-current text-gray-800"/>
                 </div>
                 <div class="shrink-0 flex items-center">
-                    <h1>Notre nom de blog</h1>
+                    <a href="{{ route('index') }}">
+                        <h1>Notre nom de blog</h1>
+                    </a>
                 </div>
 
                 <!-- Navigation Links -->

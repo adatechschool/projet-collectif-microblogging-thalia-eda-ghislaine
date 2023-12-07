@@ -1,9 +1,5 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Ma page') }}
-        </h2>
-    </x-slot>
+<h1 class="text-2xl font-bold px-4 py-3">Ma page</h1>
 <h2>Mes posts</h2>
 <p>Je crée un nouveau post</p>
 <h2>Mes abonnements</h2>

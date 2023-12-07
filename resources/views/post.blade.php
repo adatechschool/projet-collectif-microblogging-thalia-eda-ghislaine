@@ -1,23 +1,12 @@
 <x-app-layout>
 
-{{-- @section('content') --}}
-    <h1>{{ $post->title }}</h1>
-    <img src="{{ $post->image }}" alt="photo de mon post">
-    <p>{{ $post->content }}</p>
-    <p>nombre de like: {{ $post->like }}</p>
-    <p>publié le {{ $post->published }} par : <a href="{{ route('users.show', $post->user_id) }}">{{ $post->user_id }}</a></p>
-    <img src="/images/icone_coeur.svg" height="17" alt="icone like">
-    <img src="/images/icone_comment.svg" height="17" alt="icone commentaire"> 
-
-{{-- @endsection --}}
-
 <div class="bg-gray-100 p-4">
     <div class="bg-white border rounded-sm max-w-md">
       <div class="flex items-center px-4 py-3">
         <img class="h-8 w-8 rounded-full" src="https://picsum.photos/id/1027/150/150"/>
         <div class="ml-3 ">
-          <span class="text-sm font-semibold antialiased block leading-tight">8fact</span>
-          <span class="text-gray-600 text-xs block">Asheville, North Carolina</span>
+          <span class="text-sm font-semibold antialiased block leading-tight">{{ $post->title }} - publié le {{ $post->published }} par : <a href="{{ route('users.show', $post->user_id) }}">{{ $post->user_id }}</a></span>
+          <span class="text-gray-600 text-xs block">{{ $post->content }}</span>
         </div>
       </div>
       <img src="https://picsum.photos/id/244/900/900"/>
@@ -31,7 +20,8 @@
           <svg fill="#262626" height="24" viewBox="0 0 48 48" width="24"><path d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z"></path></svg>
         </div>
       </div>
-      <div class="font-semibold text-sm mx-4 mt-2 mb-4">92,372 likes</div>
+      <div class="font-semibold text-sm mx-4 mt-2 mb-4">{{ $post->like }} likes</div>
     </div>
   </div>
+  
 </x-app-layout>

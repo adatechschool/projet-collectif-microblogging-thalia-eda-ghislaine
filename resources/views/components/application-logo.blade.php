@@ -1,4 +1,4 @@
-<svg width="3in" height="3in" clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.1" viewBox="0 0 3000 3000" xmlns="http://www.w3.org/2000/svg">
+<svg width="0.5in" height="0.5in" clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.1" viewBox="0 0 3000 3000" xmlns="http://www.w3.org/2000/svg">
  <defs>
   <style type="text/css">.str1 {stroke:#373435;stroke-width:27.7795} .str0 {stroke:#373435;stroke-width:6.94488} .fil2 {fill:none} .fil0 {fill:#6B809B} .fil1 {fill:#00AFEF}</style>
  </defs>
