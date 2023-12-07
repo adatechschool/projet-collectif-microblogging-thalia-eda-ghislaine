@@ -25,6 +25,9 @@ Route::get('/user/{user}', [UsersController::class, 'show'])->name('users.show')
 Route::get('/', [PostController::class, 'index'])->name('index');
 Route::get('/post/{post}', [PostController::class, 'show'])->name('post.show');
 
+Route::get('/createPost', [PostController::class, 'create'])->name('createPost');
+Route::post('/storePost', [PostController::class, 'store'])->name('storePost');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
