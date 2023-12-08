@@ -1,7 +1,7 @@
 <x-app-layout>
 
 <h1 class="text-2xl font-bold px-4 py-3">Page d'accueil où il y a plein de belles photos</h1>
-
+<div class="grid grid-cols-4 gap-4">
     @foreach($posts as $post)
     <div class="bg-gray-100 p-4">
         <div class="bg-white border rounded-sm max-w-md">
@@ -28,5 +28,5 @@
       </div>
         <li></li>
     @endforeach
-
+    </div>
 </x-app-layout>
