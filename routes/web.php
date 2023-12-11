@@ -1,12 +1,14 @@
 <?php
 
+use App\Http\Controllers\AbonnementsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\App;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\DashboardController;
 
-
+App::setLocale("fr");
 
 /*
 |--------------------------------------------------------------------------
@@ -30,10 +32,15 @@ Route::get('/post/{post}', [PostController::class, 'show'])->name('post.show');
 Route::get('/createPost', [PostController::class, 'create'])->name('createPost');
 Route::post('/storePost', [PostController::class, 'store'])->name('storePost');
 
-
+// dashboard = ma page profile
 Route::get('/dashboard', [DashboardController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
+
+Route::get('/abonnements', [AbonnementsController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('abonnements');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
