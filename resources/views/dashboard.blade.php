@@ -10,9 +10,9 @@
             <span class="text-base text-gray-700 text-2xl mr-2">{{ Auth::user()->name }}</span>
             <span class="text-base font-semibold text-gray-700 mr-2">
               {{-- lien editer à faire --}}
-              <button
+              <a href="{{ route('profile.edit') }}"><button
                 class="bg-transparent hover:bg-blue-500 text-gray-700 font-semibold hover:text-white py-2 px-4 border border-gray-600 hover:border-transparent rounded"
-              >Editer ma page</button>
+              >Editer ma page</button></a>
             </span>
             <span class="text-base font-semibold text-gray-700">
               <button
@@ -59,9 +59,9 @@
             >https://www.behance.net/hiravesona7855</p>
             <br>
             <span class="text-base font-semibold text-gray-700 mr-2">
-              <button
+              <a href="{{ route('abonnements') }}"><button
                 class="bg-transparent hover:bg-blue-500 text-gray-700 font-semibold hover:text-white py-2 px-4 border border-gray-600 hover:border-transparent rounded"
-              >Mes abonnements</button>
+              >Mes abonnements</button></a>
             </span>
           </div>
 
