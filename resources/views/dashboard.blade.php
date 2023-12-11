@@ -254,10 +254,11 @@
         @forelse ($posts as $post)
         <div class="flex-1 text-center px-4 py-2 m-2">
         <p>{{ $post->title }}</p>
-          <img
-            class="w-full"
-            src="https://images.unsplash.com/photo-1487530811176-3780de880c2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-          />
+        @if ($post->image)
+        <img src="{{ asset('storage/' . $post->image) }}" alt="Image du post">
+    @else
+        <p>Aucune image</p>
+    @endif
         </div>
         @empty
         <p>Aucun post disponible pour le moment.</p>
