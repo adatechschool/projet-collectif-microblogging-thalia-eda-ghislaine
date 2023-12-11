@@ -9,6 +9,12 @@
                 <label for="title" class="block text-sm font-medium text-gray-700">Titre :</label>
                 <input type="text" name="title" id="title" class="mx-auto p-2 w-full sm:w-80 border rounded-md" required>
             </div>
+
+            <div class="mb-4">
+                <label for="image" class="block text-sm font-medium text-gray-700">Image :</label>
+                <input type="file" name="image" id="image" class="mt-1 p-2 w-full sm:w-80 border rounded-md">
+            </div>
+            
             <div class="mb-4">
                 <label for="content" class="block text-sm font-medium text-gray-700">Contenu :</label>
                 <textarea name="content" id="content" class="mt-1 p-2 w-full sm:w-80 border rounded-md" required></textarea>
