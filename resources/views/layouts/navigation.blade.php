@@ -15,12 +15,27 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    @auth
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{-- route à changer --}}
                         {{ __('Mes abonnements') }}
                     </x-nav-link>
+                    @endif
                         
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                {{-- barre de recherche --}}
+                <div class="search-bar">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
+                      <g>
+                        <path
+                          d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+                        ></path>
+                      </g>
+                    </svg>
+                    <input class="input-search" type="search" placeholder="Recherche" />
+                </div>
+            </div>
             </div>
 
             <!-- Settings Dropdown -->
@@ -28,7 +43,11 @@
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                            {{-- <div>Bienvenue {{ Auth::user()->name }} !</div> --}}
+                            @auth
+                                <div>Bienvenue {{ Auth::user()->name }} !</div>
+                            @else
+                                <div><a href="{{ route('login') }}">Connectez-vous !</a></div>
+                            @endif
 
                             <div class="ml-1">
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -37,29 +56,31 @@
                             </div>
                         </button>
                     </x-slot>
-
+                    
                     <x-slot name="content">
+                        {{-- menu déroulant si connecté --}}
+                        @auth
                         <x-dropdown-link :href="route('dashboard')">
                             {{ __('Ma page') }}
                         </x-dropdown-link>
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Mon compte') }}
                         </x-dropdown-link>
-
                         <x-dropdown-link :href="route('createPost')">
                             {{ __('Ajouter une publication') }}
                         </x-dropdown-link>
-
+                        
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                 {{ __('Se déconnecter') }}
                             </x-dropdown-link>
                         </form>
+                        @endif
+
                     </x-slot>
                 </x-dropdown>
             </div>
