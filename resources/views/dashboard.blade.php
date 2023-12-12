@@ -41,10 +41,10 @@
               <b>{{ Auth::user()->posts->count() }}</b> posts
             </span>
             <span class="text-base font-semibold text-gray-700 mr-2">
-              <b>112</b> followers
+              <b>{{ $followers->count() }}</b> followers
             </span>
             <span class="text-base font-semibold text-gray-700">
-              <b>200</b> following
+              <b>{{ $followings->count() }}</b> following
             </span>
           </div>
           <br>
