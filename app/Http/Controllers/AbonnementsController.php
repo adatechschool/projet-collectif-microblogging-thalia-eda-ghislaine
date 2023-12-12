@@ -13,8 +13,10 @@ class AbonnementsController extends Controller
         if (Auth::check()) {
             $user = Auth::user();
             $posts = $user->posts;
+            $followers = $user->followers;
+            $followings = $user->followings;
 
-            return view('abonnements', ['posts' => $posts]); // Utilise 'posts' => $posts au lieu de 'post = $post'
+            return view('abonnements', ['posts' => $posts, 'followers' => $followers, 'followings' => $followings]); // Utilise 'posts' => $posts au lieu de 'post = $post'
         } else {
             // Gérer le cas où l'utilisateur n'est pas authentifié
             return redirect('/login');

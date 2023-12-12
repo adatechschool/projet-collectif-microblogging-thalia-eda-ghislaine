@@ -11,53 +11,20 @@
                 </div>
                 <br>
                 <div class="flex flex-wrap w-full">
-                {{-- @foreach ($users as $user) --}}
+                @foreach ($followers as $follower)
                   <div class="flex flex-col mr-5 text-center mb-11 lg:mr-16">
                     <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
-                      <img class="inline-block shrink-0 rounded-full [.95rem] w-[150px] h-[150px]" src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/avatars/avatar11.jpg" alt="avarat image">
+                      <img class="inline-block shrink-0 rounded-full [.95rem] w-[150px] h-[150px]" 
+                      src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/avatars/avatar11.jpg" alt="avatar image">
                     </div>
                     <div class="text-center">
-                      <a href="javascript:void(0)" class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">Samantha Reynolds</a>
+                      <a href="javascript:void(0)" class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">{{ $follower->name }}</a>
                     </div>
-                    <button>Se désabonner</button>
+                    <button class="bg-transparent hover:bg-red-500 text-red-700 hover:text-white font-semibold py-2 px-4 border border-red-500 hover:border-transparent rounded">
+                      Se désabonner
+                    </button>
                   </div>
-                  <div class="flex flex-col mr-5 text-center mb-11 lg:mr-16">
-                    <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
-                      <img class="inline-block shrink-0 rounded-full [.95rem] w-[150px] h-[150px]" src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/avatars/avatar2.jpg" alt="avarat image">
-                    </div>
-                    <div class="text-center">
-                      <a href="javascript:void(0)" class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">Benjamin Martinez</a>
-                    </div>
-                    <button>Se désabonner</button>
-                  </div>
-                  <div class="flex flex-col mr-5 text-center mb-11 lg:mr-16">
-                    <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
-                      <img class="inline-block shrink-0 rounded-full [.95rem] w-[150px] h-[150px]" src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/avatars/avatar5.jpg" alt="avarat image">
-                    </div>
-                    <div class="text-center">
-                      <a href="javascript:void(0)" class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">Emily Turner</a>
-                    </div>
-                    <button>Se désabonner</button>
-                  </div>
-                  <div class="flex flex-col mr-5 text-center mb-11 lg:mr-16">
-                    <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
-                      <img class="inline-block shrink-0 rounded-full [.95rem] w-[150px] h-[150px]" src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/avatars/avatar24.jpg" alt="avarat image">
-                    </div>
-                    <div class="text-center">
-                      <a href="javascript:void(0)" class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">Jason Anderson</a>
-                    </div>
-                    <button>Se désabonner</button>
-                  </div>
-                  <div class="flex flex-col mr-5 text-center mb-11 lg:mr-16">
-                    <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
-                      <img class="inline-block shrink-0 rounded-full [.95rem] w-[150px] h-[150px]" src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/avatars/avatar23.jpg" alt="avarat image">
-                    </div>
-                    <div class="text-center">
-                      <a href="javascript:void(0)" class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">Olivia Carter</a>
-                    </div>
-                    <button>Se désabonner</button>
-                  </div>
-                  {{-- @endforeach --}}
+                  @endforeach
                 </div>
               </div>
             </div>
