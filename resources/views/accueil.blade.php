@@ -8,7 +8,9 @@
           <div class="flex items-center px-4 py-3">
             <img class="h-8 w-8 rounded-full" src="https://picsum.photos/id/1027/150/150"/>
             <div class="ml-3 ">
-              <span class="text-sm font-semibold antialiased block leading-tight">{{ $post->title }} - publié le {{ $post->published }} par : <a href="{{ route('users.show', $post->user_id) }}">{{ $post->user_id }}</a></span>
+              <span class="text-sm font-semibold antialiased block leading-tight">
+                {{ $post->title }} - publié le {{ $post->created_at }} par : 
+                <a href="{{ route('users.show', $post->user_id) }}" class="underline">{{ \App\Models\User::find($post->user_id)->name }}</a></span>
               <span class="text-gray-600 text-xs block">{{ $post->content }}</span>
             </div>
           </div>
