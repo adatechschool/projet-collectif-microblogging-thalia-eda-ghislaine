@@ -20,9 +20,12 @@
                     <div class="text-center">
                       <a href="javascript:void(0)" class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">{{ $follower->name }}</a>
                     </div>
+                    <form action="{{ route('unsubscribe', Auth::id()) }}" method="POST">
+                      @csrf
                     <button class="bg-transparent hover:bg-red-500 text-red-700 hover:text-white font-semibold py-2 px-4 border border-red-500 hover:border-transparent rounded">
                       Se désabonner
                     </button>
+                  </form>
                   </div>
                   @endforeach
                 </div>
