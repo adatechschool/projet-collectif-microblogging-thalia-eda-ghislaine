@@ -48,6 +48,7 @@ class PostController extends Controller
         $post->image = $request->file('image')->store('images/posts', 'public');
 
 
+
         $post->save();
 
         return redirect()->route('dashboard')->with('success', 'Post créé avec succès!');

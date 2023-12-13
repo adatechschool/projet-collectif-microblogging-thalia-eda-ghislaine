@@ -56,8 +56,8 @@
                   aria-haspopup="true"
                 >
                   <img
-                    class="h-25 w-25 rounded-full"
-                    src="https://tecdn.b-cdn.net/img/new/avatars/5.webp"
+                    class="h-20 w-20 rounded-full"
+                    src="{{ asset('storage/' . $user->avatar) }}"
                     alt="avatar"
                   />
                 </button>
@@ -84,7 +84,7 @@
                   
                   <div class="flex items-center mb-4">
                    
-                    <img class="h-6 w-6 rounded-full" src="https://picsum.photos/id/1027/150/150"/>
+                    <img class="h-9 w-9 rounded-full" src="{{ asset('storage/' . $user->avatar) }}"/>
                     <div class="ml-3">
                       <span class="text-lg font-semibold antialiased block leading-tight">
                         <a href="{{ route('post.show', $post->id) }}">{{$post['title']}}

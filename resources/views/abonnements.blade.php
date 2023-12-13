@@ -15,7 +15,7 @@
                   <div class="flex flex-col mr-5 text-center mb-11 lg:mr-16">
                     <div class="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
                       <img class="inline-block shrink-0 rounded-full [.95rem] w-[150px] h-[150px]" 
-                      src="https://raw.githubusercontent.com/Loopple/loopple-public-assets/main/riva-dashboard-tailwind/img/avatars/avatar11.jpg" alt="avatar image">
+                      src="{{ asset('storage/' . $follower->avatar) }}" alt="avatar image">
                     </div>
                     <div class="text-center">
                       <a href="javascript:void(0)" class="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">{{ $follower->name }}</a>

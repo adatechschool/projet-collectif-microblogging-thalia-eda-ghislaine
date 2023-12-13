@@ -4,7 +4,7 @@
           <div class="py-2 px-2">
                   <div class="relative mt-1 flex">
                       <div class="mr-2">
-                          <img class="h-7 w-7 rounded-full" src="https://picsum.photos/id/1027/150/150" alt="User Image">
+                          <img class="h-7 w-7 rounded-full" src="{{ asset('storage/' . $post->user->avatar) }}" alt="User Image">
                       </div>
                       <div class="ml-3 flex justify-start flex-col items-start">
                           <p class="text-gray-900 text-sm">
