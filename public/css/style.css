@@ -40,3 +40,19 @@
     width: 1rem;
     height: 1rem;
   }
+
+  .more-link {
+    color: #596067; 
+    font-size: small;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none; 
+    display: inline-block; 
+    margin-top: 8px;
+  }
+
+  .more-link:hover {
+    text-decoration: underline; /* Soulignement au survol */
+  }
+
+ 

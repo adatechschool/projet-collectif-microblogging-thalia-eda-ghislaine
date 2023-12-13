@@ -251,22 +251,45 @@
           </div>
         </div>
       </div> --}}
+     
+      
+      </a>
 
-      <!--post images-->
-      <div class="flex pt-4">
+      <div class="grid grid-cols-2 gap-4">
         @forelse ($posts as $post)
-        <div class="flex-1 text-center px-4 py-2 m-2">
-        <p>{{ $post->title }}</p>
-        @if ($post->image)
-        <img src="{{ asset('storage/' . $post->image) }}" alt="Image du post">
-    @else
-        <p>Aucune image</p>
-    @endif
-        </div>
+            <div class="flex-1 text-center px-4 py-2 m-2">
+                <p class="mb-2">{{ $post->title }}</p>
+                
+                <div class="flex justify-center items-center mb-2">
+                  <a href="{{ route('post.show', $post->id) }}">
+                    @if ($post->image)
+                        <img src="{{ asset('storage/' . $post->image) }}" alt="Image du post" class="max-w-48 h-auto">
+                    @else
+                        <p>Aucune image</p>
+                    @endif
+                </a>
+                
+                </div>
+    
+                <form action="{{ route('deletePost', $post->id) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+    
+                    <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded">
+                      Supprimer
+                    </button>
+                </form>
+            </div>
         @empty
-        <p>Aucun post disponible pour le moment.</p>
-    @endforelse
-    </div>     
+            <p>Aucun post disponible pour le moment.</p>
+        @endforelse
+    </div>
+    
+    
+    
+  
+
+
 
     </div>
   </div>
