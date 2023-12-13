@@ -32,6 +32,11 @@ class Post extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function likes()
+    {
+        return $this->hasMany(Likes::class, 'id_post');
+    }
 }
 
 // Cette méthode belongsTo indique à Eloquent que la clé étrangère user_id dans la table des posts correspond à l'ID de l'utilisateur dans la table des utilisateurs.

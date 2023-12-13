@@ -36,6 +36,10 @@ Route::post('/storePost', [PostController::class, 'store'])->name('storePost');
 
 Route::delete('/deletePost/{post}', [PostController::class, 'destroy'])->name('deletePost');
 
+Route::get('/likes', [LikesController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('likes');
+Route::post('/likes/{user}', [LikesController::class, 'like'])->name('like');
 
 // dashboard = ma page profile
 Route::get('/dashboard', [DashboardController::class, 'index'])

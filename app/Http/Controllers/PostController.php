@@ -62,4 +62,9 @@ class PostController extends Controller
         return redirect()->route('dashboard')->with('success', 'Post supprimé avec succès!');
     }
 
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
+
 }
