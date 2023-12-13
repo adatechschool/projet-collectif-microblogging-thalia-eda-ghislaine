@@ -6,25 +6,36 @@
       
       @foreach($posts as $post)
         <div class="bg-gray-100 p-4">
+
           <div class="bg-white border rounded-sm max-w-md p-4">
+            
             <div class="flex items-center mb-4">
+             
               <img class="h-6 w-6 rounded-full" src="https://picsum.photos/id/1027/150/150"/>
               <div class="ml-3">
                 <span class="text-lg font-semibold antialiased block leading-tight">
                   <a href="{{ route('post.show', $post->id) }}">{{$post['title']}}
-                  </span>
-                <span class="text-xs text-gray-600 block">
-                  Publié le {{ $post->created_at }} par : 
-                  <a href="{{ route('users.show', $post->user_id) }}" class="underline">{{ \App\Models\User::find($post->user_id)->name }}</a>
-                </span>
-              </div>
-            </div>
-            <p class="text-gray-600 mb-4 overflow-hidden">
-              {{ \Illuminate\Support\Str::limit($post->content, 100, $end='...') }}
-              @if (strlen($post->content) > 100)
-                <a href="{{ route('post.show', $post->id) }}" class="more-link">Lire plus</a>
-              @endif
-            </p>
+                    <span class="text-xs text-gray-600 block">
+                      Publié le {{ $post->created_at }} par : 
+                      <a href="{{ route('users.show', $post->user_id) }}" class="underline">{{ \App\Models\User::find($post->user_id)->name }}</a>
+                    </span>
+                  </div>
+                </div>
+            
+                <div class="relative">
+                  @if($post->image)
+                    <img src="{{ asset('storage/' . $post->image) }}" alt="Image du post" class="w-full h-40 object-cover mb-4">
+                  @else
+                    <p class="w-full h-40 flex items-center justify-center bg-gray-200 text-gray-500 mb-4">Aucune image</p>
+                  @endif
+            
+                  <p class="text-gray-600 mb-4 overflow-hidden">
+                    {{ \Illuminate\Support\Str::limit($post->content, 100, $end='...') }}
+                    @if (strlen($post->content) > 100)
+                      <a href="{{ route('post.show', $post->id) }}" class="more-link">Lire plus</a>
+                    @endif
+                  </p>
+                </div>
             
               <div class="flex items-center justify-between mx-4 mt-3">
               <div class="flex gap-3 items-center">
