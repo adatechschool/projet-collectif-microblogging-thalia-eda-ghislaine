@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
+
 class PostController extends Controller
 {
     public function index()
@@ -50,6 +51,15 @@ class PostController extends Controller
         $post->save();
 
         return redirect()->route('dashboard')->with('success', 'Post créé avec succès!');
+    }
+
+    public function destroy(Post $post)
+    {
+        
+
+        $post->delete();
+
+        return redirect()->route('dashboard')->with('success', 'Post supprimé avec succès!');
     }
 
 }

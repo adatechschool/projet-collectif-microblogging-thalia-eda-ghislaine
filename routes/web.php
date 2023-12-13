@@ -32,6 +32,11 @@ Route::get('/post/{post}', [PostController::class, 'show'])->name('post.show');
 Route::get('/createPost', [PostController::class, 'create'])->name('createPost');
 Route::post('/storePost', [PostController::class, 'store'])->name('storePost');
 
+//supprimer un post
+
+Route::delete('/deletePost/{post}', [PostController::class, 'destroy'])->name('deletePost');
+
+
 // dashboard = ma page profile
 Route::get('/dashboard', [DashboardController::class, 'index'])
     ->middleware(['auth', 'verified'])
