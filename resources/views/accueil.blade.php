@@ -6,11 +6,8 @@
       
       @foreach($posts as $post)
         <div class="bg-gray-100 p-4">
-
           <div class="bg-white border rounded-sm max-w-md p-4">
-            
             <div class="flex items-center mb-4">
-             
               <img class="h-6 w-6 rounded-full" src="https://picsum.photos/id/1027/150/150"/>
               <div class="ml-3">
                 <span class="text-lg font-semibold antialiased block leading-tight">
