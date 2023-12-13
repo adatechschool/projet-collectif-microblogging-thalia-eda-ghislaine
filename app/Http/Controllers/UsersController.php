@@ -16,8 +16,15 @@ class UsersController extends Controller
 
     public function show(User $user)
     {
+        $posts = $user->posts;
+        $followers = $user->followers;
+        $followings = $user->followings;
+
         return view('users', [
-            'user' => $user
+            'user' => $user,
+            'posts' => $posts,
+            'followers' => $followers,
+            'followings' => $followings,
         ] );
     }
 
