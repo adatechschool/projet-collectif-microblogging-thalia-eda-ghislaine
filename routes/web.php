@@ -45,6 +45,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])
 Route::get('/abonnements', [AbonnementsController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('abonnements');
+Route::post('/unsubscribe/{user}', [AbonnementsController::class, 'unsubscribe'])->name('unsubscribe');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
