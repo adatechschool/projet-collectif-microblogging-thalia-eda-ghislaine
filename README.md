@@ -22,7 +22,7 @@ Eda OZDEMIR - Thalia WOODS - Ghislaine AYBRAM
 ![App Screenshot](/public/images/page_profil_connecte_site.png)
 
 *Un formulaire d'ajout de post*
-![App Screenshot](/public/images/formulaire_nouveau_post_mobile)
+![App Screenshot](/public/images/formulaire_nouveau_post_mobile.png)
 
 *Une page présentant les personnes auxquelles l'utilisateur est abonné*
 à venir
