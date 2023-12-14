@@ -18,7 +18,7 @@
          <div class="flex">
     <div class="relative w-1/2 h-full">
       @if($post->image)
-      <img src="{{ asset('storage/' . $post->image) }}" alt="Image du post" class="w-full h-full object-cover">
+      <img src="{{ asset('storage/' . $post->image) }}" alt="Image du post" class="w-25 object-cover mb-4">
   @else
       <p class="w-full h-full flex items-center justify-center bg-gray-200 text-gray-500">Aucune image</p>
   @endif    </div>

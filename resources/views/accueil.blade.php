@@ -1,6 +1,7 @@
 <x-app-layout>
-<h1 class="text-xl font-bold mb-8">Bienvenue dans notre refuge virtuel pour amoureux des animaux !</h1>
-
+  <div class="flex justify-center">
+<h1 class="text-xl font-bold mb-6">Bienvenue sur notre blog pour les animaux !</h1>
+  </div>
   <div class="max-w-xl mx-auto mt-10">
     <div class="grid grid-cols-1 gap-6">  
       
