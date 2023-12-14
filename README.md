@@ -5,7 +5,6 @@ Less utilisateurs peuvent :
 - créer des posts associant une image et un texte,
 - les retrouver regroupés au sein d’une page personnelle,
 - voir les posts des autres membres.
-
 Ils disposent également pour cela : 
 - d’une page de connexion,
 - d’une page de profil éditable.
@@ -17,7 +16,7 @@ Eda OZDEMIR - Thalia WOODS - Ghislaine AYBRAM
 ## Aperçu du projet
 
 *La page d'accueil du blog*
-![App Screenshot](/react-app/src/assets/images/page_accueil.jpg)
+![App Screenshot](/public/images/page_accueil_non_connecte.png)
 
 *Une page de profil de l'utilisateur connecté*
 ![App Screenshot](/react-app/src/assets/images/page_details_produit.jpg)
@@ -30,36 +29,38 @@ Eda OZDEMIR - Thalia WOODS - Ghislaine AYBRAM
 
 ## Tech Stack
 
-- **Langages:** PHP, SQL
+- **Langages:** PHP, HTML, CSS, SQL
 - **Framework / Library:** Laravel, Tailwind
 - **Database:** PostgreSQL
 - **Environnement:** Docker
 
 ## Fonctionnalités ajoutées
 
-- [X] utilisation d'un framework (React),
-- [X] utilisation d'une bibliothèque CSS (Bootstrap),
-- [X] conception d'une base de données non relationnelle (MongoDB),
-- [X] utilisation d'un framework pour la gestion de la base de données (Mongoose),
-- [X] page principale qui regroupe les meubles en vente,
-- [X] encarts produits cliquables regroupant une photo, le type de meuble, le prix et un bouton pour l’acheter,
-- [X] page détails produits regroupant une série de photos du meuble et les informations (type, prix, dimensions, couleurs, matières et un bouton d'achat),
-- [X] page de connexion (non fonctionnelle),
-- [X] page d'inscription utilisateurs (non fonctionnelle) avec email / mot de passe / types de meubles recherchés,
-- [X] sécurisation des mots de passe (hashage),
-- [X] page de gestion des produits présentant la liste des meubles,
-- [X] page panier (non fonctionnelle),
+- [X] utilisation d'un framework full-stack (Laravel),
+- [X] utilisation d'un framework CSS (Tailwind),
+- [X] conception d'une base de données relationnelle (PostgreSQL),
+- [X] page d'inscription et de connexion,
+- [X] page principale qui regroupe les posts de tous les utilisateurs,
+- [X] page de profil éditable avec informations utilisateur (avatar, biographie, nombre de posts / de followers / de personnes suivies) et l'ensemble des posts de l'utilisateur connecté (avec possibilité de suppression des posts),
+- [X] page listant les membres auxquels l’utilisateur connecté est abonné,
+- [X] page utilisateur sur le même format que la page de profil mais non éditable,
+- [X] formulaire de création de nouveaux posts associant une image, un titre et un texte,
+- [X] gestion de l'authentification (via Laravel Breeze),
+- [X] génération de fausses données (via DatabaseSeeder),
+
 
 ## Reste à implémenter
 
-- [ ] relier la page de connexion FRONT avec l'authentification côté BACK,
-- [ ] relier la page d'inscription utilisateurs avec le BACK (base de données, hashage mot de passe)
-- [ ] fonctionnalité permettant de modifier les informations des produits à l'aide d'un bouton / de supprimer les produits (page de gestion des produits),
-- [ ] rendre la page panier fonctionnelle,
-- [ ] création d'une page qui permettent aux utilisateurs connectés de proposer des meubles à la vente,
-- [ ] fonctionnalité permettant de valider les meubles proposés par les utilisateurs / ajout d'un statut pour les meubles (page de gestion de produits),
-- [ ] affichage de la page principale qui s’adapte en fonction des profils utilisateurs (types de meubles cochés dans la page d'inscription en premier sur la page),
-- [ ] mise en place d'un calendrier qui permette de visualiser tous les évènements créés par les personnes suivies par son compte,
+- [ ] implémenter les tests (objectif = au moins 50% de couverture de tests automatisés),
+- [ ] implémenter une pagination à la liste des posts,
+- [ ] rendre la barre de recherche fonctionnelle (filtre avec les champs description des posts, nom / biographie de l'utilisateur),
+- [ ] terminer la fonctionnalité des likes (ajout et suppresion des likes),
+- [ ] ajout de commentaires sous les posts (par les utilisateurs connectés),
+- [ ] ajout de hashtags qui donnent lieu à une recherche du terme lorsque l’on clique dessus,
+- [ ] implémenter un lazy loading,
+- [ ] terminer la fonctionnalité d'abonnement de personnes (ajout et suppresion des abonnements),
+- [ ] création d'un feed personnel (page listant uniquement les posts des membres auxquels l’utilisateur est abonné),
+
       
 ## Lancement du projet
 
