@@ -19,13 +19,13 @@ Eda OZDEMIR - Thalia WOODS - Ghislaine AYBRAM
 ![App Screenshot](/public/images/page_accueil_non_connecte.png)
 
 *Une page de profil de l'utilisateur connecté*
-![App Screenshot](/react-app/src/assets/images/page_details_produit.jpg)
+![App Screenshot](/public/images/page_profil_connecte_site.png)
 
 *Un formulaire d'ajout de post*
-![App Screenshot](/react-app/src/assets/images/page_admin.jpg)
+![App Screenshot](/public/images/formulaire_nouveau_post_mobile)
 
 *Une page présentant les personnes auxquelles l'utilisateur est abonné*
-![App Screenshot](/react-app/src/assets/images/formulaire_creation_compte.jpg)
+à venir
 
 ## Tech Stack
 
