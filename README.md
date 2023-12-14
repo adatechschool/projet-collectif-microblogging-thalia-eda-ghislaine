@@ -31,9 +31,9 @@ Eda OZDEMIR - Thalia WOODS - Ghislaine AYBRAM
 ## Tech Stack
 
 - **Langages:** PHP, SQL
-- **Framework / Library:** Laravel
-- **Serveur:** Node.js, Express
-- **Database:** PostGreSQL
+- **Framework / Library:** Laravel, Tailwind
+- **Database:** PostgreSQL
+- **Environnement:** Docker
 
 ## Fonctionnalités ajoutées
 
