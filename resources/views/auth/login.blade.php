@@ -44,4 +44,11 @@
             </x-primary-button>
         </div>
     </form>
+    <script>
+        @if (Route::has('login'))
+            @auth
+                window.location.href = "{{ url('/dashboard') }}";
+            @endauth
+        @endif
+    </script>
 </x-guest-layout>

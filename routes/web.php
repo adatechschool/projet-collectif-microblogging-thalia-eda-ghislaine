@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\LikesController;
 use App\Http\Controllers\DashboardController;
 
 App::setLocale("fr");
